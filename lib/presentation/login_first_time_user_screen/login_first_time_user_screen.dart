@@ -1,0 +1,10 @@
+import 'package:flutter/material.dart';import 'package:handyman_service_appv2/core/app_export.dart';import 'package:handyman_service_appv2/widgets/custom_elevated_button.dart';import 'package:handyman_service_appv2/widgets/custom_outlined_button.dart';class LoginFirstTimeUserScreen extends StatelessWidget {const LoginFirstTimeUserScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { mediaQueryData = MediaQuery.of(context); return SafeArea(child: Scaffold(body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 54.v), child: Column(children: [Spacer(flex: 43), CustomImageView(imagePath: ImageConstant.imgSignal, height: 60.v, width: 98.h, onTap: () {onTapImgSignal(context);}), SizedBox(height: 57.v), Text("Welcome", style: CustomTextStyles.headlineSmallSemiBold), SizedBox(height: 7.v), SizedBox(width: 203.h, child: Text("Welcome to fix,  to get started, kindly select a provider applicable to your location.", maxLines: 3, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center, style: CustomTextStyles.bodyMediumBluegray500)), Spacer(flex: 56), CustomElevatedButton(text: "Sign Up", buttonStyle: CustomButtonStyles.fillGray, buttonTextStyle: CustomTextStyles.titleMediumOnError, onPressed: () {onTapSignUp(context);}), SizedBox(height: 12.v), CustomOutlinedButton(height: 49.v, text: "Log in", buttonStyle: CustomButtonStyles.outlineBlack, buttonTextStyle: theme.textTheme.titleMedium!, onPressed: () {onTapLogIn(context);}), SizedBox(height: 32.v), Text("2023 Dynamic Initiative Consult", style: CustomTextStyles.labelLargeBluegray400)])))); } 
+/// Navigates to the onboardingScreenOneScreen when the action is triggered.
+onTapImgSignal(BuildContext context) { Navigator.pushNamed(context, AppRoutes.onboardingScreenOneScreen); } 
+/// Navigates to the createAnAccountFilledScreen when the action is triggered.
+onTapSignUp(BuildContext context) { Navigator.pushNamed(context, AppRoutes.createAnAccountFilledScreen); } 
+/// Navigates to the loginScreen when the action is triggered.
+onTapLogIn(BuildContext context) { Navigator.pushNamed(context, AppRoutes.loginScreen); } 
+ }
